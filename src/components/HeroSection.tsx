@@ -160,8 +160,8 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Add keyframes for animations */}
-      <style jsx>{`
+      <style>
+        {`
         @keyframes float {
           0%, 100% { transform: translateY(0) rotate(0deg); }
           50% { transform: translateY(-20px) rotate(10deg); }
@@ -170,7 +170,8 @@ const HeroSection = () => {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
         }
-      `}</style>
+        `}
+      </style>
     </section>
   );
 };
