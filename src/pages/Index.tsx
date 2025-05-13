@@ -3,7 +3,7 @@ import React from 'react';
 import HeroSection from '@/components/HeroSection';
 import SectionWrapper from '@/components/SectionWrapper';
 import { Card, CardContent } from '@/components/ui/card';
-import { Mail, Phone, Linkedin, Download } from 'lucide-react';
+import { Mail, Phone, Linkedin, Download, ChartBar, ChartLine } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -42,35 +42,35 @@ const Index = () => {
       <HeroSection />
 
       {/* About Preview Section */}
-      <SectionWrapper className="bg-gray-50">
-        <h2 className="section-title text-center animate-on-scroll">About Me</h2>
+      <SectionWrapper className="bg-gradient-to-b from-indigo-50 to-white">
+        <h2 className="section-title text-center animate-on-scroll text-blue-900">About Me</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="animate-on-scroll">
-            <h3 className="section-subtitle">Background</h3>
+            <h3 className="section-subtitle text-blue-800">Background</h3>
             <p className="text-gray-700 mb-6">
               I'm a passionate finance and operations professional with a strong academic background and practical experience in financial analysis, operations optimization, and supply chain management.
             </p>
             <p className="text-gray-700">
               Currently pursuing my MBA with a specialization in Finance, Operations, and Supply Chain Management, I aim to leverage my skills to drive operational efficiency and financial growth.
             </p>
-            <Button asChild className="mt-6 bg-primary hover:bg-primary-dark">
+            <Button asChild className="mt-6 bg-blue-600 hover:bg-blue-700">
               <Link to="/about">Learn More About Me</Link>
             </Button>
           </div>
           <div className="animate-on-scroll">
-            <h3 className="section-subtitle">Skills</h3>
+            <h3 className="section-subtitle text-blue-800">Skills</h3>
             <div className="flex flex-wrap gap-3">
               {skills.map((skill, index) => (
                 <span 
                   key={index} 
-                  className="px-4 py-2 bg-white border border-gray-200 rounded-full text-primary shadow-sm"
+                  className="px-4 py-2 bg-white border border-blue-100 rounded-full text-blue-700 shadow-sm"
                 >
                   {skill}
                 </span>
               ))}
             </div>
 
-            <h3 className="section-subtitle mt-8">Languages</h3>
+            <h3 className="section-subtitle text-blue-800 mt-8">Languages</h3>
             <ul className="space-y-2 text-gray-700">
               <li>Kannada, Telugu – Native Proficiency</li>
               <li>Hindi – Intermediate</li>
@@ -82,42 +82,56 @@ const Index = () => {
 
       {/* Experience Preview */}
       <SectionWrapper>
-        <h2 className="section-title text-center animate-on-scroll">Work Experience</h2>
+        <h2 className="section-title text-center animate-on-scroll text-blue-900">Work Experience</h2>
         <div className="space-y-8">
-          <Card className="animate-on-scroll">
+          <Card className="animate-on-scroll border-blue-100 shadow-md">
             <CardContent className="p-6">
-              <h3 className="font-semibold text-xl text-primary">Finance Intern</h3>
-              <p className="text-secondary font-medium">Aasaanjobs Pvt. Ltd. | Nov 2024 – Jan 2025</p>
-              <ul className="mt-4 space-y-2 text-gray-700 list-disc pl-5">
-                <li>Managed payroll processes and financial reconciliations</li>
-                <li>Filed monthly GST returns, ensuring compliance and accuracy</li>
-              </ul>
+              <div className="flex items-start gap-4">
+                <div className="bg-blue-100 p-3 rounded-full text-blue-600">
+                  <ChartLine size={24} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-xl text-blue-800">Finance Intern</h3>
+                  <p className="text-blue-600 font-medium">Aasaanjobs Pvt. Ltd. | Nov 2024 – Jan 2025</p>
+                  <ul className="mt-4 space-y-2 text-gray-700 list-disc pl-5">
+                    <li>Managed payroll processes and financial reconciliations</li>
+                    <li>Filed monthly GST returns, ensuring compliance and accuracy</li>
+                  </ul>
+                </div>
+              </div>
             </CardContent>
           </Card>
           
-          <Card className="animate-on-scroll">
+          <Card className="animate-on-scroll border-blue-100 shadow-md">
             <CardContent className="p-6">
-              <h3 className="font-semibold text-xl text-primary">Quality Assurance Intern</h3>
-              <p className="text-secondary font-medium">The Akshaya Patra Foundation | June 2024</p>
-              <ul className="mt-4 space-y-2 text-gray-700 list-disc pl-5">
-                <li>Ensured quality assurance and control in food safety operations</li>
-                <li>Monitored SOP compliance and managed stock tagging for inventory control</li>
-              </ul>
+              <div className="flex items-start gap-4">
+                <div className="bg-blue-100 p-3 rounded-full text-blue-600">
+                  <ChartBar size={24} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-xl text-blue-800">Quality Assurance Intern</h3>
+                  <p className="text-blue-600 font-medium">The Akshaya Patra Foundation | June 2024</p>
+                  <ul className="mt-4 space-y-2 text-gray-700 list-disc pl-5">
+                    <li>Ensured quality assurance and control in food safety operations</li>
+                    <li>Monitored SOP compliance and managed stock tagging for inventory control</li>
+                  </ul>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>
         <div className="text-center mt-10">
-          <Button asChild className="bg-primary hover:bg-primary-dark">
+          <Button asChild className="bg-blue-600 hover:bg-blue-700">
             <Link to="/portfolio">View My Portfolio</Link>
           </Button>
         </div>
       </SectionWrapper>
 
       {/* Education Timeline */}
-      <SectionWrapper className="bg-gray-50">
-        <h2 className="section-title text-center animate-on-scroll">Education</h2>
+      <SectionWrapper className="bg-gradient-to-b from-indigo-50 to-white">
+        <h2 className="section-title text-center animate-on-scroll text-blue-900">Education</h2>
         <div className="space-y-8 relative">
-          <div className="hidden md:block w-0.5 bg-gray-300 absolute left-1/2 transform -translate-x-1/2 h-full"></div>
+          <div className="hidden md:block w-0.5 bg-blue-200 absolute left-1/2 transform -translate-x-1/2 h-full"></div>
           
           {educationTimeline.map((item, index) => (
             <div 
@@ -127,13 +141,13 @@ const Index = () => {
               }`}
             >
               <div className="md:w-1/2"></div>
-              <div className="rounded-full w-8 h-8 bg-primary hidden md:flex items-center justify-center mx-4 z-10">
+              <div className="rounded-full w-8 h-8 bg-blue-600 hidden md:flex items-center justify-center mx-4 z-10">
                 <div className="rounded-full w-3 h-3 bg-white"></div>
               </div>
-              <Card className="md:w-1/2 w-full">
+              <Card className="md:w-1/2 w-full border-blue-100 shadow-md">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-xl text-primary">{item.degree}</h3>
-                  <p className="text-secondary font-medium">{item.institution} | {item.years}</p>
+                  <h3 className="font-semibold text-xl text-blue-800">{item.degree}</h3>
+                  <p className="text-blue-600 font-medium">{item.institution} | {item.years}</p>
                   {item.specialization && (
                     <p className="mt-2 text-gray-600">{item.specialization}</p>
                   )}
@@ -146,7 +160,7 @@ const Index = () => {
 
       {/* Contact CTA */}
       <SectionWrapper>
-        <div className="bg-primary rounded-lg p-8 text-white text-center">
+        <div className="bg-gradient-to-r from-blue-700 to-indigo-800 rounded-lg p-8 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">Let's Connect</h2>
           <p className="text-lg mb-6 max-w-2xl mx-auto">
             I'm open to opportunities in finance, operations, and supply chain management. 
@@ -178,10 +192,10 @@ const Index = () => {
             </a>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-blue-700">
               <Link to="/contact">Contact Me</Link>
             </Button>
-            <Button asChild className="bg-white text-primary hover:bg-gray-100">
+            <Button asChild className="bg-white text-blue-700 hover:bg-blue-50">
               <a href="https://crimson-kip-34.tiiny.site" target="_blank" rel="noopener noreferrer">
                 <Download size={18} className="mr-2" />
                 View Resume
