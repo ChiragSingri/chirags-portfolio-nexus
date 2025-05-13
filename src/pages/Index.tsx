@@ -184,7 +184,7 @@ const Index = () => {
             </a>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button asChild variant="outline" className="bg-white hover:text-primary">
               <Link to="/contact">Contact Me</Link>
             </Button>
             <Button asChild className="bg-white text-primary hover:bg-gray-100">
