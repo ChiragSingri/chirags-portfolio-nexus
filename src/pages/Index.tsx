@@ -30,10 +30,10 @@ const Index = () => {
       specialization: "Accounting and Marketing"
     },
     {
-      degree: "PUC in Commerce",
+      degree: "PUC",
       institution: "Sri Bhagwan Mahaveer Jain College",
       years: "2018-2020",
-      specialization: ""
+      specialization: "Commerce"
     }
   ];
 
