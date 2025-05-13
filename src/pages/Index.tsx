@@ -182,9 +182,9 @@ const Index = () => {
               <Link to="/contact">Contact Me</Link>
             </Button>
             <Button asChild className="bg-white text-primary hover:bg-gray-100">
-              <a href="/resume.pdf" download>
+              <a href="https://crimson-kip-34.tiiny.site" target="_blank" rel="noopener noreferrer">
                 <Download size={18} className="mr-2" />
-                Download Resume
+                View Resume
               </a>
             </Button>
           </div>

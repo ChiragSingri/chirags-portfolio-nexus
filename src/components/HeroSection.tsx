@@ -92,7 +92,7 @@ const HeroSection = () => {
       
       {/* Main content */}
       <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="flex flex-col md:flex-row items-center gap-8">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           {/* Left content: Text information */}
           <div className="w-full md:w-1/2 animate-fade-in">
             <div className="relative mb-8">
@@ -159,7 +159,7 @@ const HeroSection = () => {
               </Button>
               
               <Button asChild variant="ghost" className="text-[#2962FF] hover:bg-[#2962FF]/10">
-                <a href="/resume.pdf" download className="flex items-center">
+                <a href="https://crimson-kip-34.tiiny.site" target="_blank" rel="noopener noreferrer" className="flex items-center">
                   <Download size={18} className="mr-2 group-hover:animate-bounce" />
                   Resume
                 </a>
@@ -186,7 +186,7 @@ const HeroSection = () => {
                 <div className="bg-[#1E222D] p-4 rounded-md shadow-inner">
                   <div className="relative overflow-hidden mb-3">
                     <img 
-                      src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" 
+                      src="https://i.postimg.cc/yNDscVXH/Untitled-design-3.png" 
                       alt="Chirag S M" 
                       className="w-full h-64 object-cover rounded-md"
                     />
@@ -237,8 +237,7 @@ const HeroSection = () => {
         </div>
       </div>
       
-      <style>
-        {`
+      <style jsx>{`
         @keyframes float {
           0%, 100% { transform: translateY(0) rotate(0deg); }
           50% { transform: translateY(-20px) rotate(10deg); }
@@ -255,8 +254,7 @@ const HeroSection = () => {
           width: 100%;
           height: 100%;
         }
-        `}
-      </style>
+      `}</style>
     </section>
   );
 };
