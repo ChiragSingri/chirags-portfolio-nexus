@@ -19,21 +19,27 @@ const Index = () => {
   const educationTimeline = [
     {
       degree: "MBA",
-      institution: "RV Institute of Management",
+      institution: "RV Institute of Management, Bangalore",
       years: "2023-2025",
       specialization: "Finance, Operations, and Supply Chain Management"
     },
     {
       degree: "B.Com",
-      institution: "Vijaya Evening College",
+      institution: "Vijaya Evening College, Bangalore",
       years: "2020-2023",
       specialization: "Accounting and Marketing"
     },
     {
       degree: "PUC",
-      institution: "Sri Bhagwan Mahaveer Jain College",
+      institution: "Sri Bhagwan Mahaveer Jain College, V V Puram, Bangalore",
       years: "2018-2020",
       specialization: "Commerce"
+    },
+     {
+      degree: "10th",
+      institution: "Vasavi Vidyanikethan, Magadi",
+      years: "2018",
+      specialization: ""
     }
   ];
 
