@@ -183,19 +183,7 @@ const Services = () => {
         </div>
       </SectionWrapper>
 
-      {/* Call To Action */}
-      <SectionWrapper>
-        <div className="bg-primary rounded-lg p-8 text-white text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-          <p className="text-lg mb-6 max-w-2xl mx-auto">
-            Whether you need assistance with financial analysis, market research, or operations optimization, I'm here to help you achieve your goals.
-          </p>
-          <Button asChild className="bg-white text-primary hover:bg-gray-100">
-            <Link to="/contact">Contact Me Today</Link>
-          </Button>
-        </div>
-      </SectionWrapper>
-    </div>
+          </div>
   );
 };
 
