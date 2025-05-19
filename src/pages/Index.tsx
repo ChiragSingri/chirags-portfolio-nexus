@@ -34,6 +34,12 @@ const Index = () => {
       institution: "Sri Bhagwan Mahaveer Jain College",
       years: "2018-2020",
       specialization: ""
+    },
+    {
+      degree: "10th",
+      institution: "Vasavi Vidyanikethan, Magadi",
+      years: "2018",
+      specialization: ""
     }
   ];
 
