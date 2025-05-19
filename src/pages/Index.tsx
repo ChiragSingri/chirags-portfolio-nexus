@@ -19,26 +19,20 @@ const Index = () => {
   const educationTimeline = [
     {
       degree: "MBA",
-      institution: "RV Institute of Management, Bangalore",
+      institution: "RV Institute of Management",
       years: "2023-2025",
       specialization: "Finance, Operations, and Supply Chain Management"
     },
     {
       degree: "B.Com",
-      institution: "Vijaya Evening College, Bangalore",
+      institution: "Vijaya Evening College",
       years: "2020-2023",
       specialization: "Accounting and Marketing"
     },
     {
-      degree: "PUC",
-      institution: "Sri Bhagwan Mahaveer Jain College, V V Puram, Bangalore",
+      degree: "PUC in Commerce",
+      institution: "Sri Bhagwan Mahaveer Jain College",
       years: "2018-2020",
-      specialization: "Commerce"
-    },
-     {
-      degree: "10th",
-      institution: "Vasavi Vidyanikethan, Magadi",
-      years: "2018",
       specialization: ""
     }
   ];
@@ -188,9 +182,9 @@ const Index = () => {
               <Link to="/contact">Contact Me</Link>
             </Button>
             <Button asChild className="bg-white text-primary hover:bg-gray-100">
-              <a href="https://crimson-kip-34.tiiny.site" target="_blank" rel="noopener noreferrer">
+              <a href="/resume.pdf" download>
                 <Download size={18} className="mr-2" />
-                View Resume
+                Download Resume
               </a>
             </Button>
           </div>

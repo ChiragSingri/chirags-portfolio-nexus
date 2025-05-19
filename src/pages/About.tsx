@@ -22,17 +22,16 @@ const About = () => {
       "Financial Modeling",
       "GST Filing",
       "Payroll Management",
-      "Inventory Control",
-      "Basic Python"
+      "Inventory Control"
     ]
   };
 
   const achievements = [
-    "Student Coordinator, Placement Cell at RV Institute of Management",
+    "Student Coordinator, Placement Cell at RVIM",
     "Winner of Business Quizzes conducted across various B-Schools",
     "Core Committee Member, RVIM Challenge 3.0 (Budget Analysis Competition)",
     "Core Organizer, Finance Fest – Nidhi Utsav 2024",
-    "Committee Member, Student Research Symposium – Anveshan 2025, a student research conference",
+    "Committee Member, Student Research Symposium – Anveshan 2025",
     "Volunteer, REEN Conference 2025 (Hosted by IISc and University of the Fraser Valley, Canada)"
   ];
 
@@ -111,13 +110,13 @@ const About = () => {
                 </div>
                 <div className="border-l-4 border-primary pl-4 py-2">
                   <h3 className="font-semibold text-lg">10th Standard</h3>
-                  <p className="text-secondary">Vasavi Vidyanikethan, Magadi | 2018</p>
+                  <p className="text-secondary">Vasavi Vidyanikethan, Magadi</p>
                 </div>
               </div>
             </div>
 
             <div className="animate-on-scroll">
-              <h2 className="section-subtitle">Internship Experience</h2>
+              <h2 className="section-subtitle">Work Experience</h2>
               <div className="space-y-6">
                 <Card>
                   <CardContent className="p-6">
