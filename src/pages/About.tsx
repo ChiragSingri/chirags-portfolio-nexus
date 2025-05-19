@@ -73,7 +73,7 @@ const About = () => {
             <div className="sticky top-24">
               <div className="w-full aspect-square rounded-lg overflow-hidden mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" 
+                  src="https://i.postimg.cc/yNDscVXH/Untitled-design-3.png" 
                   alt="Chirag S M"
                   className="w-full h-full object-cover"
                 />
