@@ -74,7 +74,7 @@ const Contact = () => {
       icon: <Linkedin size={24} className="text-primary" />,
       title: "LinkedIn",
       value: "Connect on LinkedIn",
-      link: "https://linkedin.com/"
+      link: "https://linkedin.com/in/chiragsingri"
     }
   ];
 
