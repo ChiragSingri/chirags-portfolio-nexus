@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import SectionWrapper from '@/components/SectionWrapper';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -7,9 +7,11 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Mail, Phone, Linkedin, Download } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { toast } = useToast();
+  const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,20 +29,32 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent successfully",
-        description: "Thank you for reaching out! I'll get back to you soon.",
+    emailjs.sendForm(
+      'service_fcbpzwr', 
+      'template_w7l25at', 
+      formRef.current as HTMLFormElement,
+      'FyKyuM9fJPOB_A2H7'
+    )
+      .then((result) => {
+        toast({
+          title: "Message sent successfully",
+          description: "Thank you for reaching out! I'll get back to you soon.",
+        });
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+        setIsSubmitting(false);
+      }, (error) => {
+        toast({
+          title: "Error sending message",
+          description: "There was an error sending your message. Please try again later.",
+          variant: "destructive"
+        });
+        setIsSubmitting(false);
       });
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      setIsSubmitting(false);
-    }, 1500);
   };
 
   const contactInfo = [
@@ -84,7 +98,7 @@ const Contact = () => {
             <Card>
               <CardContent className="p-8">
                 <h2 className="text-2xl font-semibold text-primary mb-6">Send a Message</h2>
-                <form onSubmit={handleSubmit}>
+                <form ref={formRef} onSubmit={handleSubmit}>
                   <div className="space-y-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -186,12 +200,12 @@ const Contact = () => {
               <CardContent className="p-8">
                 <h2 className="text-2xl font-semibold text-primary mb-6">Download Resume</h2>
                 <p className="text-gray-700 mb-6">
-                  Get a detailed overview of my experience, skills, and qualifications. Click the button below to download my resume.
+                  Get a detailed overview of my experience, skills, and qualifications. Click the button below to view my resume.
                 </p>
                 <Button asChild className="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark">
-                  <a href="/resume.pdf" download>
+                  <a href="https://crimson-kip-34.tiiny.site" target="_blank" rel="noopener noreferrer">
                     <Download size={18} />
-                    <span>Download Resume</span>
+                    <span>View Resume</span>
                   </a>
                 </Button>
               </CardContent>
@@ -206,20 +220,6 @@ const Contact = () => {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </SectionWrapper>
-
-      {/* Map or Location */}
-      <SectionWrapper className="bg-gray-50">
-        <div className="text-center mb-8 animate-on-scroll">
-          <h2 className="section-title">Location</h2>
-          <p className="text-lg text-gray-600">Based in Bangalore, Karnataka, India</p>
-        </div>
-        <div className="h-80 bg-gray-300 rounded-lg overflow-hidden animate-on-scroll">
-          {/* This would be replaced with an actual map component in a real implementation */}
-          <div className="w-full h-full flex items-center justify-center bg-gray-200">
-            <p className="text-gray-500">Map of Bangalore, Karnataka, India</p>
           </div>
         </div>
       </SectionWrapper>

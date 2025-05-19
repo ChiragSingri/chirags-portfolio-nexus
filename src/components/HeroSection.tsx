@@ -24,14 +24,14 @@ const HeroSection = () => {
                 <Link to="/portfolio">View Portfolio</Link>
               </Button>
               <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-                <Link to="/contact">Contact Me</Link>
+                <a href="https://crimson-kip-34.tiiny.site" target="_blank" rel="noopener noreferrer">My Resume</a>
               </Button>
             </div>
           </div>
           <div className="w-full md:w-1/2 flex justify-center animate-fade-in">
             <div className="w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full shadow-xl border-4 border-white">
               <img 
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" 
+                src="https://i.postimg.cc/yNDscVXH/Untitled-design-3.png" 
                 alt="Chirag S M" 
                 className="w-full h-full object-cover"
               />
