@@ -8,7 +8,7 @@ import { ExternalLink } from 'lucide-react';
 const Portfolio = () => {
   const projects = [
     {
-      title: "Geopolitical Conflicts' Impact on Exchange Rate Dynamics",
+      title: "Impact of Geopolitical Conflicts on Exchange Rate Dynamics",
       category: "Managerial Research Project",
       description: "Research on how geopolitical conflicts impact exchange rate dynamics, using advanced methodologies such as GARCH, MS-GARCH, and VAR. The project analyzed historical data to identify patterns and correlations between conflicts and currency fluctuations.",
       highlights: [
