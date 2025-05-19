@@ -174,7 +174,7 @@ const Index = () => {
               <span>chiraaagsingri@gmail.com</span>
             </a>
             <a 
-              href="https://linkedin.com/" 
+              href="https://linkedin.com/in/chiragsingri" 
               target="_blank" 
               rel="noreferrer"
               className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-colors"
